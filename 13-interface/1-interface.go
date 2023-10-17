@@ -13,6 +13,10 @@ type ai struct {
 	name string
 }
 
+type afthab struct {
+	name string
+}
+
 func (h human) Speak() {
 	fmt.Println("This is human speaking", h.name)
 
@@ -26,9 +30,10 @@ func doSomething(s Speaker) {
 	s.Speak()
 }
 
-// func main() {
-// 	afthab := human{
-// 		name: "Afthab",
-// 	}
-// 	doSomething(afthab)
-// }
+func main() {
+	zo := human{
+		name: "Afthab",
+	}
+	van := afthab{name: "afthab"}
+	doSomething(van)
+}
